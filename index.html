@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf Charity Subscription Platform</title>
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS  -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <!-- Navbar Content -->
+    <nav class="navbar navbar-expand-lg custom-nav">
+      <div class="container">
+
+        <a class="navbar-brand" href="#">DrawFor<span class="brand-highlight">Good</span></a>
+        <!-- Hamburger (mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+          aria-controls="navMenu" aria-expanded="false">
+          <i class="bi bi-list" style="color: white; font-size: 1.5rem;"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
+            <li class="nav-item"><a href="#charities" class="nav-link">Charities</a></li>
+          </ul>
+          <a href="dashboard.html" class="btn btn-cta ms-3" target="_blank" rel="noopener">Get Started</a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- LEFT SIDE: Text -->
+          <div class="col-lg-6 hero-left">
+
+            <div class="hero-badge">🎯 Golf. Wins. Giving.</div>
+
+            <h1 class="hero-title">
+              Play Golf. <br>
+              Win Prizes. <br>
+              <span class="hero-accent">Give Back.</span>
+            </h1>
+
+            <p class="hero-sub">
+              Enter your scores, join monthly draws, and support
+              a charity you believe in — all in one place.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="dashboard.html" class="btn btn-cta">Start For Free →</a>
+              <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDE: Stats Card -->
+          <div class="col-lg-6 hero-right">
+            <div class="stats-card">
+
+              <p class="stats-title">This Month's Pool</p>
+
+              <div class="stat-item">
+                <span class="stat-icon">💰</span>
+                <div>
+                  <p class="stat-label">Prize Pool</p>
+                  <p class="stat-value">£12,400</p>
+                </div>
+              </div>
+
+              <div class="stat-divider"></div>
+
+              <div class="stat-item">
+                <span class="stat-icon">❤️</span>
+                <div>
+                  <p class="stat-label">Charity Raised</p>
+                  <p class="stat-value">£3,200</p>
+                </div>
+              </div>
+
+              <div class="stat-divider"></div>
+
+              <div class="stat-item">
+                <span class="stat-icon">👥</span>
+                <div>
+                  <p class="stat-label">Active Members</p>
+                  <p class="stat-value">1,240</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="how-section" id="how-it-works">
+      <div class="container">
+
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <div class="section-badge">How It Works</div>
+          <h2 class="section-title">Simple. Transparent. Rewarding.</h2>
+          <p class="section-sub">Four easy steps to start playing, winning, and giving.</p>
+        </div>
+
+        <!-- Steps Row -->
+        <div class="row g-4 mt-2">
+
+          <!-- Step 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="step-card">
+              <div class="step-number">01</div>
+              <div class="step-icon">📝</div>
+              <h3 class="step-title">Subscribe</h3>
+              <p class="step-desc">Choose a monthly or yearly plan and create your account in minutes.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <div class="step-icon">⛳</div>
+              <h3 class="step-title">Enter Scores</h3>
+              <p class="step-desc">Log your latest Stableford golf scores. We keep your last 5 automatically.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <div class="step-icon">🎯</div>
+              <h3 class="step-title">Join the Draw</h3>
+              <p class="step-desc">Every month a draw runs automatically. Match numbers to win your share of the prize
+                pool.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="step-card">
+              <div class="step-number">04</div>
+              <div class="step-icon">❤️</div>
+              <h3 class="step-title">Give to Charity</h3>
+              <p class="step-desc">A portion of every subscription goes directly to your chosen charity.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARITIES SECTION -->
+    <section class="charities-section" id="charities">
+      <div class="container">
+
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <div class="section-badge">Our Charities</div>
+          <h2 class="section-title">Play With Purpose</h2>
+          <p class="section-sub">Every subscription supports a cause that matters. Choose yours.</p>
+        </div>
+
+        <!-- Charity Cards Row -->
+        <div class="row g-4 mt-2">
+
+          <!-- Charity 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="charity-card">
+              <div class="charity-icon">🌍</div>
+              <div class="charity-tag">Environment</div>
+              <h3 class="charity-name">Green Earth Foundation</h3>
+              <p class="charity-desc">Dedicated to reforestation and clean energy initiatives across the UK and beyond.
+              </p>
+              <div class="charity-stats">
+                <div class="charity-stat">
+                  <span class="charity-stat-value">£14,200</span>
+                  <span class="charity-stat-label">Raised So Far</span>
+                </div>
+                <div class="charity-stat">
+                  <span class="charity-stat-value">320</span>
+                  <span class="charity-stat-label">Supporters</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charity 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="charity-card charity-card--featured">
+              <div class="charity-featured-label">⭐ Featured</div>
+              <div class="charity-icon">🧒</div>
+              <div class="charity-tag">Children</div>
+              <h3 class="charity-name">Bright Futures Kids</h3>
+              <p class="charity-desc">Providing education, meals, and safe spaces for underprivileged children across
+                the country.</p>
+              <div class="charity-stats">
+                <div class="charity-stat">
+                  <span class="charity-stat-value">£28,500</span>
+                  <span class="charity-stat-label">Raised So Far</span>
+                </div>
+                <div class="charity-stat">
+                  <span class="charity-stat-value">640</span>
+                  <span class="charity-stat-label">Supporters</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charity 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="charity-card">
+              <div class="charity-icon">🏥</div>
+              <div class="charity-tag">Healthcare</div>
+              <h3 class="charity-name">MediCare For All</h3>
+              <p class="charity-desc">Funding free medical camps and essential medicines for communities in need.</p>
+              <div class="charity-stats">
+                <div class="charity-stat">
+                  <span class="charity-stat-value">£19,800</span>
+                  <span class="charity-stat-label">Raised So Far</span>
+                </div>
+                <div class="charity-stat">
+                  <span class="charity-stat-value">480</span>
+                  <span class="charity-stat-label">Supporters</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="text-center mt-5">
+          <p class="charities-cta-text">Want to support one of these causes?</p>
+          <a href="dashboard.html" class="btn btn-cta">Choose Your Charity →</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="row g-4 footer-top">
+
+        <!-- Brand Column -->
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-brand" href="#">DrawFor<span class="brand-highlight">Good</span></a>
+          <p class="footer-tagline">Play golf. Win prizes. Give back to the causes that matter most.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#charities">Charities</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Support Links -->
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Stay Updated</h4>
+          <p class="footer-newsletter-text">Get monthly draw results and charity updates in your inbox.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Enter your email" class="newsletter-input">
+            <button class="newsletter-btn">Subscribe</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Divider -->
+      <div class="footer-divider"></div>
+
+      <!-- Bottom Row -->
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 DrawForGood. All rights reserved.</p>
+        <p class="footer-credit">Built with ❤️ for golfers who give.</p>
+      </div>
+
+    </div>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="app.js"></script>
+</body>
+
+</html>
