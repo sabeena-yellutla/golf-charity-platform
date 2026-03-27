@@ -5,16 +5,13 @@ const resetBtn = document.getElementById("resetBtn");
 
 const totalEntries = document.getElementById("totalEntries");
 const activityList = document.getElementById("activityList");
-const totalWins = document.getElementById("totalWins");
 
 // LOAD DATA FROM STORAGE
-let entries = localStorage.getItem("entries") || 0;
+let entries = Number(localStorage.getItem("entries")) || 0;
 let activities = JSON.parse(localStorage.getItem("activities")) || [];
-let wins = Number(localStorage.getItem("wins")) || 0;
 
 // APPLY DATA TO UI 
 totalEntries.textContent = entries;
-totalWins.textContent = wins;
 renderActivities();
 
 // EVENT LISTENER
@@ -31,17 +28,33 @@ resetBtn.addEventListener("click", resetDashboard);
 // ADD SCORE
 function addScore() {
     const score = input.value.trim();
+    const date = document.getElementById("dateInput").value;
 
-    if (score === "") {
+    // VALIDATION
+    if (!score) {
         alert("Please enter a score");
+        return;
+    }
+
+    if (score < 1 || score > 45) {
+        alert("Score must be between 1 and 45");
+        return;
+    }
+
+    if (!date) {
+        alert("Please select a date");
         return;
     }
 
     // UPDATE ENTRIES
     entries++;
 
-    // ADD ACTIVITY
-    const newActivity = winMessage(score);
+    // ADD ACTIVITY WITH DATE
+    const newActivity = {
+        score: score,
+        date: date,
+        text: "⛳ Score " + score + " submitted on " + date
+    };
     activities.unshift(newActivity);
 
     // LIMIT TO 5
@@ -53,22 +66,12 @@ function addScore() {
     saveData();
 
     input.value = "";
-}
-
-// Win 
-function winMessage(score) {
-    if (Number(score) <= 50) {
-        wins++;
-        return "🎉 Score " + score + " submitted — You won!";
-    } else {
-        return "Score " + score + " submitted";
-    }
+    document.getElementById("dateInput").value = "";
 }
 
 // UPDATE UI
 function updateUI() {
     totalEntries.textContent = entries;
-    totalWins.textContent = wins;
     renderActivities();
 }
 
@@ -76,9 +79,14 @@ function updateUI() {
 function renderActivities() {
     activityList.innerHTML = "";
 
+    if (activities.length === 0) {
+        activityList.innerHTML = "<li class='empty-msg'>🏌️ No scores yet — submit your first score to get started!</li>";
+        return;
+    }
+
     activities.forEach(item => {
         const li = document.createElement("li");
-        li.textContent = item;
+        li.textContent = item.text;
         activityList.appendChild(li);
     });
 }
@@ -87,7 +95,6 @@ function renderActivities() {
 function saveData() {
     localStorage.setItem("entries", entries);
     localStorage.setItem("activities", JSON.stringify(activities));
-    localStorage.setItem("wins", wins);
 }
 
 // Clear Data
@@ -99,7 +106,6 @@ function resetDashboard() {
 
     // RESET STATE
     entries = 0;
-    wins = 0;
     activities = [];
 
     // UPDATE UI
@@ -107,7 +113,6 @@ function resetDashboard() {
 
     // CLEAR STORAGE
     localStorage.removeItem("entries");
-    localStorage.removeItem("wins");
     localStorage.removeItem("activities");
 }
 

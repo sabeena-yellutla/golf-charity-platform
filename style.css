@@ -114,6 +114,8 @@ body {
     font-weight: 500;
     margin-bottom: 24px;
     letter-spacing: 0.5px;
+    animation: slideFromLeft 0.6s ease both;
+    animation-delay: 0.2s;
 }
 
 .hero-title {
@@ -122,6 +124,8 @@ body {
     line-height: 1.2;
     color: var(--text-primary);
     margin-bottom: 20px;
+    animation: fadeUp 0.6s ease both;
+    animation-delay: 0.4s;
 }
 
 .hero-accent {
@@ -134,12 +138,16 @@ body {
     line-height: 1.7;
     margin-bottom: 36px;
     max-width: 460px;
+    animation: fadeUp 0.6s ease both;
+    animation-delay: 0.6s;
 }
 
 .hero-buttons {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+    animation: fadeUp 0.6s ease both;
+    animation-delay: 0.8s;
 }
 
 .btn-outline {
@@ -187,6 +195,45 @@ body {
     padding: 36px;
     width: 100%;
     max-width: 360px;
+    animation: slideFromRight 0.7s ease both;
+    animation-delay: 1s;
+}
+
+/*  KEYFRAMES  */
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .stats-title {

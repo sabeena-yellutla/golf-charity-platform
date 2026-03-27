@@ -28,7 +28,7 @@
 
             <nav class="nav flex-column">
                 <a href="dashboard.html" class="nav-link active">Dashboard</a>
-                <a class="nav-link">My Score</a>
+                <a class="nav-link">My Scores</a>
                 <a class="nav-link">My Draws</a>
                 <a class="nav-link">Charity</a>
                 <a class="nav-link">Profile</a>
@@ -80,9 +80,12 @@
                 <h5 class="mb-3">Submit Score</h5>
 
                 <div class="row g-2">
-                    <div class="col-md-9">
+                    <div class="col-md-5">
                         <input type="number" class="form-control custom-input" id="scoreInput"
-                            placeholder="Enter your score">
+                            placeholder="Enter score (1-45)" min="1" max="45">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="date" class="form-control custom-input" id="dateInput">
                     </div>
                     <div class="col-md-3">
                         <button class="btn btn-cta w-100" id="submitBtn">Submit</button>

@@ -120,6 +120,16 @@ body {
     box-shadow: none;
 }
 
+input[type="date"] {
+    color: var(--text-secondary);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    cursor: pointer;
+}
+
 .activity-list {
     list-style: none;
     padding: 0;
@@ -139,7 +149,6 @@ body {
 
 /* TABLET (≤ 992px) */
 @media (max-width: 992px) {
-
     .sidebar {
         width: 180px;
     }
@@ -147,12 +156,10 @@ body {
     .main {
         padding: 20px;
     }
-
 }
 
 /* MOBILE (≤ 768px) */
 @media (max-width: 768px) {
-
     .dashboard {
         flex-direction: column;
     }
@@ -205,7 +212,6 @@ body {
     .card .btn {
         width: 100%;
     }
-
 }
 
 /* SMALL MOBILE (≤ 480px) */
@@ -218,11 +224,9 @@ body {
     .topbar .btn-cta {
         width: 100%;
     }
-
 }
 
 @media (max-width: 320px) {
-
     .main {
         padding: 15px;
     }
@@ -243,5 +247,4 @@ body {
         font-size: 14px;
         padding: 10px;
     }
-
 }
