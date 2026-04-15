@@ -74,11 +74,11 @@ body {
     border-radius: 8px;
     color: var(--text-secondary);
     text-decoration: none;
+    color: var(--accent);
     cursor: pointer;
 }
 
 .back-icon:hover {
-    color: var(--accent);
     border-color: var(--accent);
 }
 
